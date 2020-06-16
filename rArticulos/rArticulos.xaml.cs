@@ -127,8 +127,9 @@ namespace rArticulos
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
-            Articulos articulos = new Articulos();
+             Articulos articulos = new Articulos();
             bool paso = false;
+          
 
             if (!Validar())
                 return;
