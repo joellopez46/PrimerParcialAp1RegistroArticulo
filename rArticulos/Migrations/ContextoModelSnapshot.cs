@@ -21,18 +21,21 @@ namespace RegistroArticulos.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<float>("Costo")
-                        .HasColumnType("REAL");
+                    b.Property<decimal>("Costo")
+                        .HasColumnType("TEXT");
 
-                    b.Property<int>("Descripcion")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Descripcion")
+                        .HasColumnType("TEXT");
 
-                    b.Property<float>("Valor")
-                        .HasColumnType("REAL");
+                    b.Property<decimal>("Existencia")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("Valorinventario")
+                        .HasColumnType("TEXT");
 
                     b.HasKey("ArticuloId");
 
-                    b.ToTable("Articulos");
+                    b.ToTable("Articulo");
                 });
 #pragma warning restore 612, 618
         }

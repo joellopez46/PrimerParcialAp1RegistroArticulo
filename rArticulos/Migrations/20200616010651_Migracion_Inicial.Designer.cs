@@ -8,7 +8,7 @@ using RegistroArticulos.DAL;
 namespace RegistroArticulos.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20200615233113_Migracion_Inicial")]
+    [Migration("20200616010651_Migracion_Inicial")]
     partial class Migracion_Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,18 +23,21 @@ namespace RegistroArticulos.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<float>("Costo")
-                        .HasColumnType("REAL");
+                    b.Property<decimal>("Costo")
+                        .HasColumnType("TEXT");
 
-                    b.Property<int>("Descripcion")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Descripcion")
+                        .HasColumnType("TEXT");
 
-                    b.Property<float>("Valor")
-                        .HasColumnType("REAL");
+                    b.Property<decimal>("Existencia")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("Valorinventario")
+                        .HasColumnType("TEXT");
 
                     b.HasKey("ArticuloId");
 
-                    b.ToTable("Articulos");
+                    b.ToTable("Articulo");
                 });
 #pragma warning restore 612, 618
         }

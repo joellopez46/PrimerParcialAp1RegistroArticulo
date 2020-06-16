@@ -7,25 +7,26 @@ namespace RegistroArticulos.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Articulos",
+                name: "Articulo",
                 columns: table => new
                 {
                     ArticuloId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Descripcion = table.Column<int>(nullable: false),
-                    Costo = table.Column<float>(nullable: false),
-                    Valor = table.Column<float>(nullable: false)
+                    Descripcion = table.Column<string>(nullable: true),
+                    Existencia = table.Column<decimal>(nullable: false),
+                    Costo = table.Column<decimal>(nullable: false),
+                    Valorinventario = table.Column<decimal>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Articulos", x => x.ArticuloId);
+                    table.PrimaryKey("PK_Articulo", x => x.ArticuloId);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Articulos");
+                name: "Articulo");
         }
     }
 }

@@ -8,7 +8,7 @@ namespace RegistroArticulos.DAL
 {
     public class Contexto : DbContext
     {
-        public DbSet<Articulos> Articulos { get; set; }
+        public DbSet<Articulos> Articulo { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionBuiler)
@@ -17,3 +17,5 @@ namespace RegistroArticulos.DAL
         }
     }
 }
+
+
