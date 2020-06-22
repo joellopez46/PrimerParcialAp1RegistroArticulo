@@ -2,7 +2,7 @@
 
 namespace RegistroArticulos.Migrations
 {
-    public partial class Migracion_Inicial : Migration
+    public partial class Migration_Inicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,9 +13,9 @@ namespace RegistroArticulos.Migrations
                     ArticuloId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Descripcion = table.Column<string>(nullable: true),
-                    Existencia = table.Column<decimal>(nullable: false),
-                    Costo = table.Column<decimal>(nullable: false),
-                    Valorinventario = table.Column<decimal>(nullable: false)
+                    Existencia = table.Column<int>(nullable: false),
+                    Costo = table.Column<int>(nullable: false),
+                    Valorinventario = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {

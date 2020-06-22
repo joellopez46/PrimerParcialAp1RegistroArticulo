@@ -21,17 +21,17 @@ namespace RegistroArticulos.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<decimal>("Costo")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Costo")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Descripcion")
                         .HasColumnType("TEXT");
 
-                    b.Property<decimal>("Existencia")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Existencia")
+                        .HasColumnType("INTEGER");
 
-                    b.Property<decimal>("Valorinventario")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Valorinventario")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("ArticuloId");
 

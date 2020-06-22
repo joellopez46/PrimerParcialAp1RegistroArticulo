@@ -1,0 +1,42 @@
+﻿<Window x:Class="RegistroArticulos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegistroArticulos"
+        mc:Ignorable="d"
+        Title="Registro Articulos" Height="350" Width="350">
+    <Grid >
+        <Label x:Name="Descripcion" Content="Descripcion" HorizontalAlignment="Left" Margin="23,78,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Existencia" HorizontalAlignment="Left" Margin="23,123,0,0" VerticalAlignment="Top" Width="74"/>
+        <Label Content="Costo" HorizontalAlignment="Left" Margin="23,167,0,0" VerticalAlignment="Top" Width="74"/>
+        <Label Content="Valor Inventario" HorizontalAlignment="Left" Margin="23,211,0,0" VerticalAlignment="Top" Width="95"/>
+        <Label Content="Id Articulo" HorizontalAlignment="Left" Margin="23,30,0,0" VerticalAlignment="Top" Width="74"/>
+        <TextBox x:Name="ArticuloIdTextBox" Text="{Binding ArticuloId}" HorizontalAlignment="Left" Margin="23,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" Height="22"/>
+        <TextBox x:Name="DescripcionTextBox" Text="{Binding Descripcion}" HorizontalAlignment="Left" Margin="23,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Height="22"/>
+        <TextBox x:Name="ExistenciaTextBox" Text="{Binding Existencia}" Margin="23,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="ExistenciaTextBox_TextChanged" HorizontalAlignment="Left" Width="276" Height="22"/>
+        <TextBox x:Name="CostoTextBox" Text="{Binding Costo}" HorizontalAlignment="Left" Margin="23,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" TextChanged="CostoTextBox_TextChanged" Height="22"/>
+        <TextBox x:Name="ValorinventarioTextBox" Text="{Binding Valorinventario}" HorizontalAlignment="Left" Margin="23,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" TextChanged="ValorinventarioTextBox_TextChanged" Height="22"/>
+        <Button x:Name="NuevoButton" Content="Nuevo" HorizontalContentAlignment="Right"  HorizontalAlignment="Left" Margin="23,264,0,0" VerticalAlignment="Top" Click="NuevoButton_Click" Width="71" Height="25">
+            <Button.Background>
+                <ImageBrush ImageSource="/Resources/Nuevo.jpg" AlignmentX="Left" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="GuardarButton" Content="Guardar" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="126,264,0,0" VerticalAlignment="Top" Click="GuardarButton_Click" Height="25" Width="71">
+            <Button.Background>
+                <ImageBrush ImageSource="/Resources/Guardar.png" AlignmentX="Left" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="EliminarButton" Content="Eliminar" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="228,264,0,0" VerticalAlignment="Top" Click="EliminarButton_Click" Width="71" Height="25">
+            <Button.Background>
+                <ImageBrush ImageSource="/Resources/Eliminar12.jpg" AlignmentX="Left" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BuscarButton" Content="Buscar" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="228,56,0,0" VerticalAlignment="Top" Click="BuscarButton_Click" Width="71" Height="22">
+            <Button.Background>
+                <ImageBrush ImageSource="/Resources/buscar11.png" AlignmentX="Left" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

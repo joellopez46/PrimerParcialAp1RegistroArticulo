@@ -15,11 +15,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace rArticulos
+namespace RegistroArticulos
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -79,8 +76,7 @@ namespace rArticulos
                 LlenaCampo(articulo);
             }
             else
-                MessageBox.Show("Articiulo no encontrado ....");
-
+                MessageBox.Show("Articulo no encontrado ....");
         }
 
         private bool Validar()
@@ -112,9 +108,6 @@ namespace rArticulos
                 CostoTextBox.Focus();
                 paso = false;
             }
-
-
-
             return paso;
         }
 
@@ -155,8 +148,9 @@ namespace rArticulos
 
             }
             else
+            
                 MessageBox.Show("Guardado", "Exito", MessageBoxButton.OK, MessageBoxImage.Error);
-
+            
         }
 
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
